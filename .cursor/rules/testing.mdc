@@ -1,0 +1,5 @@
+---
+#Testing
+once you are done making changes to the code base, run all the tests and ensure they pass.
+once you're done making changes, proactively ask the user if you should also write new tests to cover a new functionality.
+---
