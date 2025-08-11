@@ -12,6 +12,7 @@ const vitestConfig = defineVitestConfig({
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/flashcard/',
   test: vitestConfig.test
 })
 

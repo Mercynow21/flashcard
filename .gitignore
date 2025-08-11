@@ -116,3 +116,6 @@ stats.html
 /playwright-report/
 /test-results/
 
+# Cursor
+.cursor/
+
