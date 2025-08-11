@@ -4,6 +4,7 @@ import CategorySelectionPage from './pages/CategorySelectionPage';
 import StudyPage from './pages/StudyPage';
 import QuizPage from './pages/QuizPage';
 import StatsPage from './pages/StatsPage';
+import RedoPage from './pages/RedoPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/quiz" element={<CategorySelectionPage />} />
         <Route path="/quiz/:category" element={<QuizPage />} />
         <Route path="/stats" element={<StatsPage />} />
+        <Route path="/redo" element={<RedoPage />} />
       </Routes>
     </Router>
   );

@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 const HomePage: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold mb-8">Spanish Flashcards</h1>
+      <h1 className="text-4xl font-bold mb-4">Welcome!</h1>
+      <p className="text-xl mb-8 text-gray-600">Choose an activity to get started.</p>
       <div className="space-y-4 flex flex-col">
         <Link
           to="/study"

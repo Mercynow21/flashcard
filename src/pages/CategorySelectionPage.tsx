@@ -1,11 +1,13 @@
 // src/pages/CategorySelectionPage.tsx
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useFlashcards } from '../hooks/useFlashcards';
 
 const categories = ['animals', 'food', 'verbs'];
 
 const CategorySelectionPage: React.FC = () => {
   const location = useLocation();
+  const { wrongAnswers } = useFlashcards();
   const mode = location.pathname.includes('/study') ? 'study' : 'quiz';
 
   return (
@@ -21,6 +23,14 @@ const CategorySelectionPage: React.FC = () => {
             {category}
           </Link>
         ))}
+        {mode === 'study' && wrongAnswers.length > 0 && (
+          <Link
+            to="/redo"
+            className="w-64 px-4 py-2 text-center font-bold text-white bg-orange-500 rounded hover:bg-orange-700"
+          >
+            Redo Incorrect Cards ({wrongAnswers.length})
+          </Link>
+        )}
       </div>
       <Link
         to="/"
